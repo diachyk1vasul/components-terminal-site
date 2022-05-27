@@ -1,4 +1,4 @@
-<?
+<?php
 /*получаем значения полей из формы*/
 $subject = $_POST['subject'];
 $name = $_POST['name'];
