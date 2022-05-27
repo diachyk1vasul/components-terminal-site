@@ -5,7 +5,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-
 <title>Дякую за замовлення! Ми вам зателефонуємо!</title>
 
 <?php
@@ -57,11 +56,7 @@ orderSendTelagram($textMessage);
 
 ?>
 
-<meta name="generator">
 
-<script type="text/javascript">
-setTimeout('location.replace("index.htm")', 3000);
-</script> 
 
 </head>
 <body>
@@ -103,5 +98,8 @@ setTimeout('location.replace("index.htm")', 3000);
         padding: 5px;
     }
 </style>
+<script type="text/javascript">
+setTimeout('location.replace("index.htm")', 3000);
+</script> 
 </body>
 </html>
