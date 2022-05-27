@@ -578,7 +578,7 @@
 
             </li>
             <li>
-                <form name="feedback" id="feedback" method="post" action="/uk/feedback/feedback_form/">
+                <form name="feedback" id="feedback" method="POST" action="sendTelegram.php">
                     <input type='hidden' name='csrfmiddlewaretoken' value='o6dDYFCQ3JPKYXUK6cajCvA65PjnocjkjKHAhFmhJ8EJZeeV6olFfuLy9hl2H6zQ'>
 
                     <input type="text" placeholder="Ім'я" name="name" value="" required="">
@@ -613,13 +613,13 @@
     <div class="popup">
         <h3>Замовити</h3>
         <p>Сенсорний екран (сенсорний екран, сенсорна панель) 19 &quot;3 мм</p>
-        <form name="feedback" id="feedback4" method="post" action="/uk/feedback/feedback_form/">
-            <input type='hidden' name='csrfmiddlewaretoken' value='o6dDYFCQ3JPKYXUK6cajCvA65PjnocjkjKHAhFmhJ8EJZeeV6olFfuLy9hl2H6zQ'>
+        <form name="feedback" id="feedback4" method="POST" action="sendTelegram.php">
+            <!-- <input type='hidden' name='csrfmiddlewaretoken' value='o6dDYFCQ3JPKYXUK6cajCvA65PjnocjkjKHAhFmhJ8EJZeeV6olFfuLy9hl2H6zQ'> -->
 
             <input type="text" placeholder="Ім'я" name="name" value="" required="">
-            <input id="email" type="email" placeholder="E-mail" name="email" value="" required="">
-            <input id="tel" type="tel" placeholder="Телефон" name="tel" value="" required="">
-            <input name="subject" value="Заказать Сенсорний екран (сенсорний екран, сенсорна панель) 19 &quot;3 мм">
+            <input type="email" placeholder="E-mail" name="email" value="" required="">
+            <input type="tel" placeholder="Телефон" name="phone" value="" required="">
+            <input name="subject" value="Замовити Сенсорний екран (сенсорний екран, сенсорна панель) 19 &quot;3 мм">
             <textarea name="message" placeholder="Введіть повідомлення"></textarea>
             <input type="email" name="honeypot" value="">
             <button type="submit" value="Отправить">Відправити</button>
@@ -632,7 +632,7 @@
     <div class="popup">
         <h3>Замовити</h3>
         <p>Купюрник голова Cashcode MSM без касети</p>
-        <form name="feedback" id="feedback43" method="post" action="/uk/feedback/feedback_form/">
+        <form name="feedback" id="feedback43" method="POST" action="sendTelegram.php">
             <input type='hidden' name='csrfmiddlewaretoken' value='o6dDYFCQ3JPKYXUK6cajCvA65PjnocjkjKHAhFmhJ8EJZeeV6olFfuLy9hl2H6zQ'>
 
             <input type="text" placeholder="Ім'я" name="name" value="" required="">
@@ -651,7 +651,7 @@
     <div class="popup">
         <h3>Замовити</h3>
         <p>Купюроприймач cashcode MSM 3024</p>
-        <form name="feedback" id="feedback22" method="post" action="/uk/feedback/feedback_form/">
+        <form name="feedback" id="feedback22" method="POST" action="sendTelegram.php">
             <input type='hidden' name='csrfmiddlewaretoken' value='o6dDYFCQ3JPKYXUK6cajCvA65PjnocjkjKHAhFmhJ8EJZeeV6olFfuLy9hl2H6zQ'>
 
             <input type="text" placeholder="Ім'я" name="name" value="" required="">
@@ -670,7 +670,7 @@
     <div class="popup">
         <h3>Замовити</h3>
         <p>Принтер Custom TG-2480</p>
-        <form name="feedback" id="feedback11" method="post" action="/uk/feedback/feedback_form/">
+        <form name="feedback" id="feedback11" method="POST" action="sendTelegram.php">
             <input type='hidden' name='csrfmiddlewaretoken' value='o6dDYFCQ3JPKYXUK6cajCvA65PjnocjkjKHAhFmhJ8EJZeeV6olFfuLy9hl2H6zQ'>
 
             <input type="text" placeholder="Ім'я" name="name" value="" required="">
@@ -691,7 +691,7 @@
     <a href="#x" class="overlay" id="callback"></a>
     <div class="popup">
         <h3>Замовити зворотній дзвінок</h3>
-        <form name="feedback" id="callback" method="post" action="/uk/feedback/callback_form/">
+        <form name="feedback" id="callback" method="POST" action="sendTelegram.php">
             <input type='hidden' name='csrfmiddlewaretoken' value='o6dDYFCQ3JPKYXUK6cajCvA65PjnocjkjKHAhFmhJ8EJZeeV6olFfuLy9hl2H6zQ'>
 
             <input type="text" placeholder="Ім'я" name="name" value="" required="">

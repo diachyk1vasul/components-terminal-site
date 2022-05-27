@@ -196,7 +196,7 @@
 
             </li>
             <li>
-                <form name="feedback" id="feedback" method="post" action="/uk/feedback/feedback_form/">
+                <form name="feedback" id="feedback" method="POST" action="../sendTelegram.php">
                     <input type='hidden' name='csrfmiddlewaretoken' value='HvaE2oZQXZaO0Cu1TzmLotNxhwSF5qTIC9EBloJhDoZN1TOcTLx71sYZlYUkok9e'>
 
                     <input type="text" placeholder="Ім'я" name="name" value="" required="">
@@ -229,7 +229,7 @@
     <a href="#x" class="overlay" id="callback"></a>
     <div class="popup">
         <h3>Замовити зворотній дзвінок</h3>
-        <form name="feedback" id="callback" method="post" action="/uk/feedback/callback_form/">
+        <form name="feedback" id="callback" method="POST" action="../sendTelegram.php">
             <input type='hidden' name='csrfmiddlewaretoken' value='HvaE2oZQXZaO0Cu1TzmLotNxhwSF5qTIC9EBloJhDoZN1TOcTLx71sYZlYUkok9e'>
 
             <input type="text" placeholder="Ім'я" name="name" value="" required="">
