@@ -1,3 +1,13 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+<title>Дякую за замовлення! Ми вам зателефонуємо!</title>
+
 <?php
 /*получаем значения полей из формы*/
 $subject = $_POST['subject'];
@@ -47,13 +57,6 @@ orderSendTelagram($textMessage);
 
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-
-<title>Дякую за замовлення! Ми вам зателефонуємо!</title>
 <meta name="generator">
 
 <script type="text/javascript">
@@ -74,7 +77,7 @@ setTimeout('location.replace("index.htm")', 3000);
         </div>
     </div>
 </div>
-</body>
+
 <style>
     html, body {
         height: 100%;
@@ -100,4 +103,5 @@ setTimeout('location.replace("index.htm")', 3000);
         padding: 5px;
     }
 </style>
+</body>
 </html>
