@@ -47,41 +47,19 @@
 
 // orderSendTelagram($textMessage);
 
-/*получаем значения полей из формы*/
-$name = $_POST['name'];
-$tel = $_POST['tel'];
-$email = $_POST['email'];
-
-/*функция для создания запроса на сервер Telegram */
-function parser($url){
-    $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, $url);
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-    $result = curl_exec($curl);
-    if($result == false){     
-      echo "Ошибка отправки запроса: " . curl_error($curl);
-      return false;
-    }
-    else{
-      return true;
-    }
-}
-
-/*собираем сообщение*/
-$message .= "Новое сообщение из формы";
-$message .= "Имя: ".$name;
-$message .= "Телефон:".$tel;
-$message .= "Email:".$email;
-
-/*токен который выдаётся при регистрации бота */
-$token = "5513003219:AAH7xr5WANZ26koKipSmwZWgVa5eOVepGX4";
-/*идентификатор группы*/
-$chat_id = "-692106554";
-/*делаем запрос и отправляем сообщение*/
-parser("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$message}");
-
+$to = "vasild232@gmail.com"; // емайл получателя данных из формы
+$tema = "Форма обратной связи на PHP"; // тема полученного емайла
+$message = "Ваше имя: ".$_POST['name']."<br>";//присвоить переменной значение, полученное из формы name=name
+  $message .= "E-mail: ".$_POST['email']."<br>"; //полученное из формы name=email
+$message .= "Номер телефона: ".$_POST['phone']."<br>"; //полученное из формы name=phone
+$message .= "Сообщение: ".$_POST['message']."<br>"; //полученное из формы name=message
+$headers  = 'MIME-Version: 1.0' . "\r\n"; // заголовок соответствует формату плюс символ перевода строки
+  $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n"; // указывает на тип посылаемого контента
+mail($to, $tema, $message, $headers); //отправляет получателю на емайл значения переменных
 ?>
 
+
+<!-- 
 <!DOCTYPE html>
 <html>
 <head>
@@ -134,4 +112,4 @@ parser("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&pars
 setTimeout('location.replace("index.htm")', 3000);
 </script> 
 </body>
-</html>
+</html> -->
