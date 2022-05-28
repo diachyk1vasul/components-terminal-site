@@ -9,11 +9,11 @@
 
 <?php
 /*получаем значения полей из формы*/
-$subject = $_POST['subject'];
-$name = $_POST['name'];
-$tel = $_POST['tel'];
-$email = $_POST['email'];
-$message = $_POST['message'];
+$subject = $_GET['subject'];
+$name = $_GET['name'];
+$tel = $_GET['tel'];
+$email = $_GET['email'];
+$message = $_GET['message'];
 
 /*функция для создания запроса на сервер Telegram */
 function parser($url){
