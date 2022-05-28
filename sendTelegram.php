@@ -1,19 +1,13 @@
 
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-<title>Дякую за замовлення! Ми вам зателефонуємо!</title>
 
 <?php
 /*получаем значения полей из формы*/
-$subject = $_POST['subject'];
-$name = $_POST['name'];
-$tel = $_POST['tel'];
-$email = $_POST['email'];
-$message = $_POST['message'];
+$subject = $_GET['subject'];
+$name = $_GET['name'];
+$tel = $_GET['tel'];
+$email = $_GET['email'];
+$message = $_GET['message'];
 
 /*функция для создания запроса на сервер Telegram */
 function parser($url){
@@ -56,6 +50,12 @@ orderSendTelagram($textMessage);
 
 ?>
 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+<title>Дякую за замовлення! Ми вам зателефонуємо!</title>
 
 
 </head>
