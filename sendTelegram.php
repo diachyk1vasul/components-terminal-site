@@ -2,12 +2,55 @@
 
 
 <?php
+// /*получаем значения полей из формы*/
+// $subject = $_GET['subject'];
+// $name = $_GET['name'];
+// $tel = $_GET['tel'];
+// $email = $_GET['email'];
+// $message = $_GET['message'];
+
+// /*функция для создания запроса на сервер Telegram */
+// function parser($url){
+//     $curl = curl_init();
+//     curl_setopt($curl, CURLOPT_URL, $url);
+//     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+//     $result = curl_exec($curl);
+//     if($result == false){     
+//       echo "Помилка:" . curl_error($curl);
+//       return false;
+//     }
+//     else{
+       
+//       return true;
+//     }
+// }
+
+
+// function orderSendTelagram($message){
+
+// /*токен который выдаётся при регистрации бота */
+// $token = "5513003219:AAH7xr5WANZ26koKipSmwZWgVa5eOVepGX4";
+// /*идентификатор группы*/
+// $chat_id = "-692106554";
+// /*делаем запрос и отправляем сообщение*/
+// parser("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$message}");
+
+// }
+
+// /*собираем сообщение*/
+// $textMessage .= "Назва:".$subject."\n";
+// $textMessage .= "Ім'я:".$name."\n";
+// $textMessage .= "Телефон:".$tel."\n";
+// $textMessage .= "Email:".$email."\n";
+// $textMessage .= "Коментарій:".$message."\n";
+// $textMessage =urlencode($textMessage);
+
+// orderSendTelagram($textMessage);
+
 /*получаем значения полей из формы*/
-$subject = $_GET['subject'];
-$name = $_GET['name'];
-$tel = $_GET['tel'];
-$email = $_GET['email'];
-$message = $_GET['message'];
+$name = $_POST['name'];
+$tel = $_POST['tel'];
+$email = $_POST['email'];
 
 /*функция для создания запроса на сервер Telegram */
 function parser($url){
@@ -16,17 +59,19 @@ function parser($url){
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     $result = curl_exec($curl);
     if($result == false){     
-      echo "Помилка:" . curl_error($curl);
+      echo "Ошибка отправки запроса: " . curl_error($curl);
       return false;
     }
     else{
-       
       return true;
     }
 }
 
-
-function orderSendTelagram($message){
+/*собираем сообщение*/
+$message .= "Новое сообщение из формы";
+$message .= "Имя: ".$name;
+$message .= "Телефон:".$tel;
+$message .= "Email:".$email;
 
 /*токен который выдаётся при регистрации бота */
 $token = "5513003219:AAH7xr5WANZ26koKipSmwZWgVa5eOVepGX4";
@@ -34,19 +79,6 @@ $token = "5513003219:AAH7xr5WANZ26koKipSmwZWgVa5eOVepGX4";
 $chat_id = "-692106554";
 /*делаем запрос и отправляем сообщение*/
 parser("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$message}");
-
-}
-
-/*собираем сообщение*/
-$textMessage .= "Назва:".$subject."\n";
-$textMessage .= "Ім'я:".$name."\n";
-$textMessage .= "Телефон:".$tel."\n";
-$textMessage .= "Email:".$email."\n";
-$textMessage .= "Коментарій:".$message."\n";
-$textMessage =urlencode($textMessage);
-
-orderSendTelagram($textMessage);
-
 
 ?>
 
